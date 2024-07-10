@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRG Kompat</title>
+  </head>
+  <body>
+    <img src="./top.png" alt="Girl in a jacket" />
+
+    <main id="main">
+      <img
+        src="https://media.tenor.com/qg8K8VOmzJwAAAAi/party-popper-confetti.gif"
+        class="emoji"
+        alt="Girl in a jacket"
+      />
+      <h1 id="countDisplay">How old am i?</h1>
+      <img
+        src="https://media.tenor.com/XgZQ6ASGEC4AAAAj/confetti-party.gif"
+        class="emoji"
+        alt="Girl in a jacket"
+        style="transform: scaleX(-1)"
+      />
+    </main>
+    <button id="countButton">
+      <img src="/bottom.png" />
+    </button>
+
+    <script>
+      let count = 0;
+
+      document
+        .getElementById("countButton")
+        .addEventListener("click", function () {
+          count++;
+          if (count > 28) return;
+
+          if (count == 28) {
+            document.getElementById("countDisplay").textContent =
+              "Happy Birthday";
+          } else {
+            document.getElementById("countDisplay").textContent = count;
+          }
+          new Audio("./cartoon-slap.mp3").play();
+        });
+    </script>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #1b1f24;
+    }
+    img {
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+    }
+
+    .emoji {
+      width: 150px;
+      margin-right: 20px;
+    }
+
+    main {
+      color: white;
+      background-color: #1b1f24;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    button {
+      border: 0;
+    }
+  </style>
+</html>
